@@ -5,6 +5,7 @@
 // 4. Reverse
 // 5. Merge
 
+
 #include <stdio.h>
 
 int length;
@@ -22,15 +23,16 @@ void main()
     scanf("%d", &length);
     int array[length * 2];
     int element;
+    int num, index;
     for (int i = 0; i < length; i++)
     {
         printf("Enter element %d > ", i + 1);
         scanf("%d", &array[i]);
     }
-    while (option != 'q')
+    do
     {
+        printf("hehe");
         option = displayMenu();
-        int num, index;
 
         if (option == 'q')
         {
@@ -56,7 +58,7 @@ void main()
         {
             printArray(array);
         }
-    }
+    } while (1);
 }
 
 char displayMenu()
@@ -70,7 +72,7 @@ char displayMenu()
     printf("[m]erge\n");
     printf("[q]uit\n");
     printf("> ");
-    scanf("%c", &opt);
+    scanf(" %c", &opt);
     return opt;
 }
 
